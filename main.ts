@@ -191,13 +191,13 @@ function plan(window: WindowBar[]): { orders: PlannedOrder[]; value: number } {
 // ---------------------------------------------------------------------------
 
 /** Bars the fast trend average runs over. */
-const FAST_SPAN = 12;
+const FAST_SPAN = 60;
 /** Bars the slow trend average runs over. */
-const SLOW_SPAN = 60;
+const SLOW_SPAN = 240;
 /** Share of equity a live entry commits. */
-const LIVE_STAKE_BPS = 9500n;
+const LIVE_STAKE_BPS = 3000n;
 /** Abandon a live position that has lost this share of its cost. */
-const LIVE_STOP = 0.015;
+const LIVE_STOP = 0.02;
 /** Let a live fill go this far past its close, in basis points. */
 const LIVE_SLIPPAGE = 150;
 
